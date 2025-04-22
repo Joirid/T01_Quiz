@@ -5,8 +5,6 @@ describe('template spec', () => {
     cy.get('.veggie_burger').click()
     cy.get(':nth-child(4) > .sub_list > :nth-child(2) > span > .link').click()
 
-    
-
     // Completar el formulario con fixtures
     cy.fixture('FormFill').then((data) => {
       data.forEach((user) => {
