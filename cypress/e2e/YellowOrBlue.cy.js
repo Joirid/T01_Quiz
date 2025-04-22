@@ -23,7 +23,10 @@ describe('template spec', () => {
           }
         })
       })
+    // Verficar el mensaje de resultado
+    cy.get('[data-testid="message"]', {timeout: 2000}).should('be.visible')
+    cy.get('[data-testid="message"]').invoke('text').then((message) => {
+      expect(message.trim()).to.eq('Success!')
     })
-    
-  }
-)
+    })  
+  })
